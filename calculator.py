@@ -5,227 +5,258 @@ firstCalc = False
 def addition():
     global num,firstCalc
 
-    if(firstCalc == False):
-        operand1,operand2 = takeInput()
-        ans = operand1 + operand2
-        print(f'{operand1} + {operand2} = {ans}')
-        num = ans
-        firstCalc = True
-        menu()
-    else:
-        print('1. Add in previous value')
-        print('2. Add new operands')
-        print('3. Exit')
-        choice = int(input('Enter : '))
-        if(choice == 1):
-            operand1 = num
-            operand2 = int(input('Enter Number 2 : '))
+    try:
+        if(firstCalc == False):
+            operand1,operand2 = takeInput()
             ans = operand1 + operand2
             print(f'{operand1} + {operand2} = {ans}')
             num = ans
-            menu()
-        elif(choice == 2):
-            firstCalc = False
-            addition()
-        elif(choice == 3):
+            firstCalc = True
             menu()
         else:
-            print('!!! Enter a Valid Number !!!')
-            addition()
+            print('1. Add in previous value')
+            print('2. Add new operands')
+            print('3. Exit')
+            choice = int(input('Enter : '))
+            if(choice == 1):
+                operand1 = num
+                operand2 = int(input('Enter Number 2 : '))
+                ans = operand1 + operand2
+                print(f'{operand1} + {operand2} = {ans}')
+                num = ans
+                menu()
+            elif(choice == 2):
+                firstCalc = False
+                addition()
+            elif(choice == 3):
+                menu()
+            else:
+                print('!!! Enter a Valid Number !!!')
+                addition()
+    except Exception as e:
+        print(e)
 
 def subtraction():
     global num,firstCalc
 
-    if(firstCalc == False):
-        operand1,operand2 = takeInput()
-        ans = operand1 - operand2
-        print(f'{operand1} - {operand2} = {ans}')
-        num = ans
-        firstCalc = True
-        menu()
-    else:
-        print('1. Subtract in previous value')
-        print('2. Subtract new operands')
-        print('3. Exit')
-        choice = int(input('Enter : '))
-        if(choice == 1):
-            operand1 = num
-            operand2 = int(input('Enter Number 2 : '))
+    try:
+
+        if(firstCalc == False):
+            operand1,operand2 = takeInput()
             ans = operand1 - operand2
             print(f'{operand1} - {operand2} = {ans}')
             num = ans
-            menu()
-        elif(choice == 2):
-            firstCalc = False
-            subtraction()
-        elif(choice == 3):
+            firstCalc = True
             menu()
         else:
-            print('!!! Enter a Valid Number !!!')
-            subtraction()
+            print('1. Subtract in previous value')
+            print('2. Subtract new operands')
+            print('3. Exit')
+            choice = int(input('Enter : '))
+            if(choice == 1):
+                operand1 = num
+                operand2 = int(input('Enter Number 2 : '))
+                ans = operand1 - operand2
+                print(f'{operand1} - {operand2} = {ans}')
+                num = ans
+                menu()
+            elif(choice == 2):
+                firstCalc = False
+                subtraction()
+            elif(choice == 3):
+                menu()
+            else:
+                print('!!! Enter a Valid Number !!!')
+                subtraction()
+
+    except Exception as e:
+        print(e)
 
 def multiplication():
     global num,firstCalc
 
-    if(firstCalc == False):
-        operand1,operand2 = takeInput()
-        ans = operand1 * operand2
-        print(f'{operand1} X {operand2} = {ans}')
-        num = ans
-        firstCalc = True
-        menu()
-    else:
-        print('1. Multiply in previous value')
-        print('2. Multiply new operands')
-        print('3. Exit')
-        choice = int(input('Enter : '))
-        if(choice == 1):
-            operand1 = num
-            operand2 = int(input('Enter Number 2 : '))
+    try :
+        if(firstCalc == False):
+            operand1,operand2 = takeInput()
             ans = operand1 * operand2
             print(f'{operand1} X {operand2} = {ans}')
             num = ans
-            menu()
-        elif(choice == 2):
-            firstCalc = False
-            multiplication()
-        elif(choice == 3):
+            firstCalc = True
             menu()
         else:
-            print('!!! Enter a Valid Number !!!')
-            multiplication()
+            print('1. Multiply in previous value')
+            print('2. Multiply new operands')
+            print('3. Exit')
+            choice = int(input('Enter : '))
+            if(choice == 1):
+                operand1 = num
+                operand2 = int(input('Enter Number 2 : '))
+                ans = operand1 * operand2
+                print(f'{operand1} X {operand2} = {ans}')
+                num = ans
+                menu()
+            elif(choice == 2):
+                firstCalc = False
+                multiplication()
+            elif(choice == 3):
+                menu()
+            else:
+                print('!!! Enter a Valid Number !!!')
+                multiplication()
+
+    except Exception as e:
+        print(e)
 
 def division():
     global num,firstCalc
 
-    if(firstCalc == False):
-        operand1,operand2 = takeInput()
-        ans = operand1 / operand2
-        print(f'{operand1} / {operand2} = {ans}')
-        num = ans
-        firstCalc = True
-        menu()
-    else:
-        print('1. Division in previous value')
-        print('2. Divison new operands')
-        print('3. Exit')
-        choice = int(input('Enter : '))
-        if(choice == 1):
-            operand1 = num
-            operand2 = int(input('Enter Number 2 : '))
+    try:
+        if(firstCalc == False):
+            operand1,operand2 = takeInput()
             ans = operand1 / operand2
             print(f'{operand1} / {operand2} = {ans}')
             num = ans
-            menu()
-        elif(choice == 2):
-            firstCalc = False
-            division()
-        elif(choice == 3):
+            firstCalc = True
             menu()
         else:
-            print('!!! Enter a Valid Number !!!')
-            division()
+            print('1. Division in previous value')
+            print('2. Divison new operands')
+            print('3. Exit')
+            choice = int(input('Enter : '))
+            if(choice == 1):
+                operand1 = num
+                operand2 = int(input('Enter Number 2 : '))
+                ans = operand1 / operand2
+                print(f'{operand1} / {operand2} = {ans}')
+                num = ans
+                menu()
+            elif(choice == 2):
+                firstCalc = False
+                division()
+            elif(choice == 3):
+                menu()
+            else:
+                print('!!! Enter a Valid Number !!!')
+                division()
+
+    except Exception as e:
+        print(e)
 
 def percentage():
     global num,firstCalc
 
-    if(firstCalc == False):
-        print('Note : 1st Enter Number and 2nd Percentage')
-        operand1,operand2 = takeInput()
-        ans =  operand2 / operand1 *100
-        print(f'{operand1} % {operand2} = {ans}')
-        num = ans
-        firstCalc = True
-        menu()
-    else:
-        print('1. Percentage in previous value')
-        print('2.Percentage new operands')
-        print('3. Exit')
-        choice = int(input('Enter : '))
-        if(choice == 1):
-            operand1 = num
-            operand2 = int(input('Enter Number 2 : '))
+    try:
+        if(firstCalc == False):
+            print('Note : 1st Enter Number and 2nd Percentage')
+            operand1,operand2 = takeInput()
             ans =  operand2 / operand1 *100
             print(f'{operand1} % {operand2} = {ans}')
             num = ans
-            menu()
-        elif(choice == 2):
-            firstCalc = False
-            percentage()
-        elif(choice == 3):
+            firstCalc = True
             menu()
         else:
-            print('!!! Enter a Valid Number !!!')
-            percentage()
-  
+            print('1. Percentage in previous value')
+            print('2.Percentage new operands')
+            print('3. Exit')
+            choice = int(input('Enter : '))
+            if(choice == 1):
+                operand1 = num
+                operand2 = int(input('Enter Number 2 : '))
+                ans =  operand2 / operand1 *100
+                print(f'{operand1} % {operand2} = {ans}')
+                num = ans
+                menu()
+            elif(choice == 2):
+                firstCalc = False
+                percentage()
+            elif(choice == 3):
+                menu()
+            else:
+                print('!!! Enter a Valid Number !!!')
+                percentage()
+    
+    except Exception as e:
+        print(e)
+
 def modulus():
     global num,firstCalc
 
-    if(firstCalc == False):
-        operand1,operand2 = takeInput()
-        ans =  operand1 % operand2
-        print(f'{operand1} Modulus {operand2} = {ans}')
-        num = ans
-        firstCalc = True
-        menu()
-    else:
-        print('1. Modulus in previous value')
-        print('2.Modulus new operands')
-        print('3. Exit')
-        choice = int(input('Enter : '))
-        if(choice == 1):
-            operand1 = num
-            operand2 = int(input('Enter Number 2 : '))
+    try:
+        if(firstCalc == False):
+            operand1,operand2 = takeInput()
             ans =  operand1 % operand2
             print(f'{operand1} Modulus {operand2} = {ans}')
             num = ans
-            menu()
-        elif(choice == 2):
-            firstCalc = False
-            modulus()
-        elif(choice == 3):
+            firstCalc = True
             menu()
         else:
-            print('!!! Enter a Valid Number !!!')
-            modulus()
-  
+            print('1. Modulus in previous value')
+            print('2.Modulus new operands')
+            print('3. Exit')
+            choice = int(input('Enter : '))
+            if(choice == 1):
+                operand1 = num
+                operand2 = int(input('Enter Number 2 : '))
+                ans =  operand1 % operand2
+                print(f'{operand1} Modulus {operand2} = {ans}')
+                num = ans
+                menu()
+            elif(choice == 2):
+                firstCalc = False
+                modulus()
+            elif(choice == 3):
+                menu()
+            else:
+                print('!!! Enter a Valid Number !!!')
+                modulus()
+    
+    except Exception as e:
+        print(e)
+
 def primeNumber():
     global num,firstCalc
-    if(firstCalc == False):
-        operand1 = int(input('Enter Number : '))
-        
-        isPrime = checkPrime(operand1)
-        
-        if(isPrime):
-            print(f'{operand1} is Not a prime number')
-        else:
-            print(f'{operand1} is  a prime number')
 
-        num = operand1
-        firstCalc = True
-        menu()
-    else:
-        print('1. Check Prime Number of Previous Value')
-        print('2. Find Prime Number of another Number')
-        print('3. Exit')
-        choice = int(input('Enter : '))
-        if(choice == 1):
-            operand1 = num
+    try:
+        if(firstCalc == False):
+            operand1 = int(input('Enter Number : '))
+        
             isPrime = checkPrime(operand1)
+        
             if(isPrime):
                 print(f'{operand1} is Not a prime number')
             else:
                 print(f'{operand1} is  a prime number')
-            menu()
-            
-        elif(choice == 2):
-            firstCalc = False
-            primeNumber()
-        elif(choice == 3):
+
+            num = operand1
+            firstCalc = True
             menu()
         else:
-            print('!!! Enter a Valid Number !!!')
-            primeNumber()
+            print('1. Check Prime Number of Previous Value')
+            print('2. Find Prime Number of another Number')
+            print('3. Exit')
+            choice = int(input('Enter : '))
+            if(choice == 1):
+                operand1 = num
+                isPrime = checkPrime(operand1)
+                if(isPrime):
+                    print(f'{operand1} is Not a prime number')
+                else:
+                    print(f'{operand1} is  a prime number')
+                menu()
+            
+            elif(choice == 2):
+                firstCalc = False
+                primeNumber()
+        
+            elif(choice == 3):
+                menu()
+        
+            else:
+                print('!!! Enter a Valid Number !!!')
+                primeNumber()
+
+    except Exception as e:
+        print(e)
   
 def checkPrime(num):
     isPrime = False
