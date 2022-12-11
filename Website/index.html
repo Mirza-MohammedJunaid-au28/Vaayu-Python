@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.svg">
+    <title>Team Vaayushastra</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/mediaQuery.css">
+
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body id="index-body">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div id="logo-box">
+                <img src="./assets/img/logo.svg" alt="vaayu-logo" id="vaayu-logo" />
+                <a class="navbar-brand align-middle" id="logo" href="#">Team Vaayushastra</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" ><i class='bx bx-menu bx-md' style='color:#ffffff;position: relative;bottom: 5px;'  ></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ms-auto nav-elements">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Department
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./static/avionics.html">Avionics</a></li>
+                            <li><a class="dropdown-item" href="./static/design.html">Design</a></li>
+                            <li><a class="dropdown-item" href="./static/media.html">M & M</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./static/achievements.html">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./static/supportus.html">Support Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section id="home-section">
+            <div id="team-info">
+                <h1>We Are ...</h1>
+                <div>
+                    Team Vaayushastra was established in the year 2012 to represent Fr.
+                    Conceicao Rodrigues College of Engineerin in the SAE Aero Design
+                    Competition. Since that year, we have participated annually in the
+                    advanced class of the SAE Aero Design Competition, held in the
+                    United States, 9 times.
+                    <br />
+                    <br />
+                    We have been one of the most consistent teams by finishing in the
+                    worldwide top 10 rankings, 7 times. The team is formed by 30
+                    undergraduate students from different departments of the college who
+                    have the aptitude and interest conducive to the competition.
+                </div>
+            </div>
+            <div id="date-counter">
+                <div id="counter"></div>
+                <h4>SAE AERO DESIGN EAST, LAKELAND, FLORIDA, USA</h4>
+            </div>
+        </section>
+        <section id="our-department">
+            <h1>Our Departments</h1>
+            <div class="slider">
+                <a id="avionics-department" href="./static/avionics.html">
+                    <img class='department-img' src="./assets/img/avionics.jpg" alt="">
+                    <h3>Avionics</h3>
+                    <span>Works with Electronics and write Algorithm for Automation Control System</span>
+                </a>
+                <a id="design-department" href="./static/design.html">
+                    <img class='department-img' src="./assets/img/design.jpg" alt="">
+                    <h3>Design & Modelling</h3>
+                    <span>Design , Analyse & Manufacture the Aircraft</span>
+                </a>
+                <a id="media-department" href="./static/media.html">
+                    <img class='department-img' src="./assets/img/media.jpg" alt="">
+                    <h3>Media & Marketing</h3>
+                    <span>Handles Team Social Media Accounts and be in constant touch with our sponsors</span>
+                </a>
+            </div>
+        </section>
+        <section id="rankings">
+            <h1 id="ranking-head">Rankings</h1>
+            <img src="./assets/img/rankings.png" alt="ranking" id="ranking-img">
+            <a href="./static/achievements.html" id="acheivement-btn">Click Here to See our Acheivements</a>
+        </section>
+        <section id="contact-section">
+            <h1>Contact Us</h1>
+            <div id="contact-box">
+                <div id="map-section">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4411288196634!2d72.818181814697!3d19.044332987106113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9410830616d%3A0x111b63353dbbce01!2sFr.%20Conceicao%20Rodrigues%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1670699672327!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="vertical-line"></div>
+                <div id="contact-form">
+                    <form action="https://getform.io/f/29eda634-4151-41bf-a3bf-a3a0ae141fb7" method="post">
+                        <label for="name">Name :</label> <br>
+                        <input type="text" name='name' id="name" required> <br>
+                        <label for="email">Email :</label> <br>
+                        <input type="email" name="email"  id="email" required> <br>
+                        <label for="message">Message :</label> <br>
+                        <textarea id="message" name="message" cols="30" rows="5"></textarea> <br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main> 
+    <div id="supportus-btn">
+        <a href="./static/supportus.html">
+            <img src="./assets/img/support-btn.png" alt="supportbtn">
+        </a>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
+
+</html>
