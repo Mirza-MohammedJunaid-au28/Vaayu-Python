@@ -32,8 +32,3 @@ name = input('Enter your Name : ') # stroing input value in name variable
 print(name)
 age = int(input('Enter your Age : ')) # Taking Integer Value
 print(age)
-
-
-
-
-

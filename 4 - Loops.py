@@ -21,7 +21,7 @@ for iterator_var in sequence:
 
         or
 
-for iterator_var in (start,end,steps):
+for iterator_var in ramge(start,end,steps):
     statements
 """
 for i in range(10):

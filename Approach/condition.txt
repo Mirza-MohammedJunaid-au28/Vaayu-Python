@@ -1,0 +1,72 @@
+# If PADA is Right Side of Checkpoint & Down from Curved Altitude
+            if (plane_coordinates[0] > checkpoints[i][0] and curved_altitude > plane_altitude):
+                dist_log = abs(plane_coordinates[1] - checkpoints[i][1])
+                dist_lat = abs(plane_coordinates[0] - checkpoints[i][0])
+                dist_alt = abs(curved_altitude - plane_altitude) 
+                if(dist_log > 6.56168):
+                    print('New Route')
+                    checkpoints = cp.create_checkpoint(plane_coordinates[0],plane_coordinates[1],destination_lat, destination_log, plane_length)
+                    print(checkpoints)
+                    checkPath(checkpoints) 
+                print(f'Move {dist_log} in straight & {dist_lat} in Left & Up in {dist_alt}')
+                checkpointss.pop(i)
+                break
+
+            # # If PADA is Right Side of Checkpoint & Down from Curved Altitude
+            # if (plane_coordinates[0] == checkpoints[i][0] and curved_altitude > plane_altitude):
+            #     dist_log = abs(plane_coordinates[1] - checkpoints[i][1])
+            #     dist_lat = abs(plane_coordinates[0] - checkpoints[i][0])
+            #     dist_alt = abs(curved_altitude - plane_altitude) 
+            #     if(dist_log > 6.56168):
+            #         print('New Route')
+            #         checkpoints = cp.create_checkpoint(plane_coordinates[0],plane_coordinates[1],destination_lat, destination_log, plane_length)
+            #         print(checkpoints)
+            #         checkPath(checkpoints) 
+            #     print(f'Move {dist_log} in straight & {dist_lat} in Left & Up in {dist_alt}')
+            #     checkpointss.pop(i)
+            #     break
+
+            # If PADA is Right Side of Checkpoint & Up from Curved Altitude
+            elif (plane_coordinates[0] > checkpoints[i][0] and curved_altitude < plane_altitude):
+                dist_log = abs(plane_coordinates[1] - checkpoints[i][1])
+                dist_lat = abs(plane_coordinates[0] - checkpoints[i][0]) 
+                dist_alt = abs(curved_altitude - plane_altitude) 
+                if(dist_log > 6.56168):
+                    print('New Route')
+                    checkpoints = cp.create_checkpoint(plane_coordinates[0],plane_coordinates[1],destination_lat, destination_log, plane_length)
+                    print(checkpoints)
+                    checkPath(checkpoints) 
+                print(f'Move {dist_log} in straight & {dist_lat} in Left & Down in {dist_alt}')
+                checkpointss.pop(i)
+                break
+
+            # If PADA is Left Side of Checkpoint & Down from Curved Altitude
+            elif (plane_coordinates[0] < checkpointss[i][0] and curved_altitude > plane_altitude):
+                dist_log = abs(plane_coordinates[1] - checkpointss[i][1]) 
+                dist_lat = abs(plane_coordinates[0] - checkpointss[i][0]) 
+                dist_alt = abs(curved_altitude - plane_altitude)    
+                if(dist_log > 6.56168):
+                    print('New Route')
+                    checkpoints = cp.create_checkpoint(plane_coordinates[0],plane_coordinates[1],destination_lat, destination_log, plane_length)
+                    print(checkpoints)
+                    checkPath(checkpoints) 
+                print(f'Move {dist_log} in straight & {dist_lat} in Right & Up in {dist_alt}')
+                break
+
+            # If PADA is Left Side of Checkpoint & Up from Curved Altitude
+            elif (plane_coordinates[0] < checkpointss[i][0] and curved_altitude < plane_altitude):
+                dist_log = abs(plane_coordinates[1] - checkpointss[i][1]) 
+                dist_lat = abs(plane_coordinates[0] - checkpointss[i][0]) 
+                dist_alt = abs(curved_altitude - plane_altitude)    
+                if(dist_log > 6.56168):
+                    print('New Route')
+                    checkpoints = cp.create_checkpoint(plane_coordinates[0],plane_coordinates[1],destination_lat, destination_log, plane_length)
+                    print(checkpoints)
+                    checkPath(checkpoints) 
+                print(f'Move {dist_log} in straight & {dist_lat} in Right & Down in {dist_alt}')
+                break
+
+            elif checkpointss[i][0] == plane_coordinates[0] and checkpointss[i][1] == plane_coordinates[1]:
+                print(f'Crossed the Checkpoint{i} : {i}')
+                checkpointss.pop(i)
+                break
